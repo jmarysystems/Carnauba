@@ -6,18 +6,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         
-        <script type="text/javascript" src='../../../../arquivos/js/jquery.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/jmary_menu_jquery.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/mostrarTd_Js.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/jquery.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/jmary_menu_jquery.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/mostrarTd_Js.js'></script>
 
-        <link rel="stylesheet" href="../../../../arquivos/css/jmarymenudrop.css"/>
-        <link rel="stylesheet" href="../../../../arquivos/css/jmary_topo.css"/>
-        <link rel="stylesheet" href="../../../../arquivos/css/estrutura.css"/>   
+        <link rel="stylesheet" href="../../../arquivos/css/jmarymenudrop.css"/>
+        <link rel="stylesheet" href="../../../arquivos/css/jmary_topo.css"/>
+        <link rel="stylesheet" href="../../../arquivos/css/estrutura.css"/>   
         
-        <link rel="shortcut icon" href="../../../../arquivos/icon/jmol.png">
+        <link rel="shortcut icon" href="../../../arquivos/icon/jmol.png">
         
-        <script type="text/javascript" src='../../../../arquivos/js/fonteMaisMenos.js'></script>
-        <script type="text/javascript" src='../../../../arquivos/js/imprimir_div.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/fonteMaisMenos.js'></script>
+        <script type="text/javascript" src='../../../arquivos/js/imprimir_div.js'></script>
                
         <style>
             /* Livros_FÌSICA */
@@ -41,6 +41,15 @@
             font:normal 120% verdana,arial,helvetica;
             width: 100%; height: 100%; padding: 0; margin: 0;">  
  
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id_nome_" value="null">
+<!-- input(S) ################################################################# -->   
+
+<!-- input(S) ################################################################# -->         
+        <input type="hidden" id="usuario_logado_id_" value="null">
+<!-- input(S) ################################################################# --> 
+
+
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 -0
 -1
@@ -76,14 +85,14 @@
         <td style="margin: 0px; padding: 0px">                           
 
             <!-- <img id="imgindice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px" title="Ocultar Menu" src="https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no" onmouseover="this.src='https://lh5.googleusercontent.com/TzMvRE-mNdRGJ_NDE-WnbVnnsR6GevE0KhgCfaBiru4=w213-h212-p-no'" onmouseout="this.src='https://lh4.googleusercontent.com/XGFbwR2WT1Nm2cO60UiUGEnJ_GjrTAwc8-eWpjlJXcY=w196-h207-p-no'" onclick="mostrarocultar('indice');"> -->
-            <a href="../../../../index.html" target="_parent">
+            <a href="../../../index.html" target="_parent">
             <img id="img2indice" width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:15px" title="Ir Para a Página Inicial" 
-                 src="../../../../arquivos/imagens/002_menu/casa.png" 
+                 src="../../../arquivos/imagens/002_menu/casa.png" 
                  onclick="mostrarocultar('indice');">
             </a>
 
             <img width="19px" height="20px" style="position:relative; float: left; cursor:pointer; margin-top:10px; margin-left:20px" title="Imprimir conteúdo abaixo" 
-                 src="../../../../arquivos/imagens/002_menu/impressora.png"
+                 src="../../../arquivos/imagens/002_menu/impressora.png"
                  onclick="printDiv('corpo');">
                                  
             <!-- Fim: Esquerda - Direita - Imprimir - Java -->
@@ -106,15 +115,15 @@
                 <tr>
                     <td>
                         <a href="#" onclick="javascript:tamanhofonte('mais',  'corpo' );"> 
-                            <img src="../../../../arquivos/imagens/002_menu/FonteAum.png" title="Aumentar Fonte" width="23" height="23"></a>&nbsp;
+                            <img src="../../../arquivos/imagens/002_menu/FonteAum.png" title="Aumentar Fonte" width="23" height="23"></a>&nbsp;
                     </td>
                     <td>
                         <a href="#" onclick="javascript:tamanhofonte('padrao', 'corpo');"> 
-                            <img src="../../../../arquivos/imagens/002_menu/FontePadrao.png" title="Fonte Padrão" width="23" height="23"></a>&nbsp;
+                            <img src="../../../arquivos/imagens/002_menu/FontePadrao.png" title="Fonte Padrão" width="23" height="23"></a>&nbsp;
                     </td>
                     <td>
                         <a href="#" onclick="javascript:tamanhofonte('menos',  'corpo');"> 
-                            <img src="../../../../arquivos/imagens/002_menu/FonteDim.png" title="Diminuir Fonte" width="23" height="23"></a>
+                            <img src="../../../arquivos/imagens/002_menu/FonteDim.png" title="Diminuir Fonte" width="23" height="23"></a>
                     </td>
                 </tr>                   
             </tbody>
@@ -153,11 +162,7 @@
 
 
 
-
-
-
-
-       
+    
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 -0
 -1
@@ -184,11 +189,8 @@
             <!--  -->    
                 <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" >
  
-    
   
-                    
-                    
-
+                   
 <!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
                     <!-- INÍCIO -- -->                      
                     <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
@@ -196,39 +198,12 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro" _blank-->
+                                    <!-- target="_parent" target="centro"      ---     <a href="javascript:my_function();window.print();">....</a>     -->
                                     <a 
-                                        target="_parent"
-                                        href="https://docs.google.com/spreadsheets/d/1Mz95_s7qSDXCg-CWAMxZaWJ8Rhqsh5EJY4Dxvfm9Th4/edit?usp=sharing" >                                                
+                                        href="javascript:abrir_controle_de_validade();" >
+                                                                                
                                         <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/padaria/0001.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM --------------------------------------------------------------------------------->                   
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -- target="_blank" -->
-                                    <a         
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1HfI8HLDztVBUu2x3Uh3_AKcYGXKIYy2uEm0HgBcBzmg/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="../zz_produtos/0011.png" > 
+                                             src="Categoria/0001.png" > 
                                     </a>
                                 </td> 
                             </tr> 
@@ -236,7 +211,8 @@
                     </li>
                     <!-- FIM -- -->   
 <!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-  
+
+
                     
                     
         
@@ -249,7 +225,7 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro" -->
+                                    <!-- target="_parent" target="_blank" target="centro" -->
                                     <a 
                                         
                                         href="Categoria/armazenados_e_nao_expostos/pagina_inicial.html" >                                                
@@ -279,10 +255,11 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro" -->
+                                    <!-- target="_parent" target="_blank" target="centro" -->
                                     <a 
                                         
-                                        href="Categoria/30_dias_sem_venda/pagina_inicial.html" >                                                
+                                        target="_blank"
+                                        href="https://docs.google.com/spreadsheets/d/1NeHJEXUWqYe1zY7o8Rge2aZtJhYIHj5yVXaBi6n6rYc/edit?usp=sharing" >                                                
                                         <img width="250px" height="300px" class="mousepointer floatr positionr" 
                                              src="Categoria/0014.png" > 
                                     </a>
@@ -299,149 +276,10 @@
 
 
 
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        
-                                        href="Categoria/dde/pagina_inicial.html" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0015.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1hSK-MsxsvDIIf48U_OkBPGAS0PK3uKriLOK4U9LyqIk/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0012.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1ZkP8eOpf225PNGUl6JXwJbHNZoZp7JR02qYL6H_LPPI/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0013.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-  
-                    
-                    
-           
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -- target="_blank" -->
-                                    <a         
-                                        target="_blank"
-                                        href="https://sites.google.com/site/pdfrelatorios/AN.pdf" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0002.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-  
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -- target="_blank" -->
-                                    <a         
-                                        target="_blank"
-                                        href="https://sites.google.com/site/pdfrelatorios/SI.pdf" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0005.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM --------------------------------------------------------------------------------->                    
-    
- 
-                    
-                    
                     
 
-                    
+
+
 <!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
                     <!-- INÍCIO -- -->                      
                     <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
@@ -449,118 +287,10 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro" -->
+                                    <!-- target="_parent" target="_blank" target="centro" -->
                                     <a 
                                         target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/15jMWfheYb16dOi-Nu5aYN__gjNoVGrMq4QpL4UcoxPQ/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0001.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1bctN3lPqacQ0UNGsjkN2OdsVGra4v69nDTd-y1NIECI/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0006.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" target="_blank"-->
-                                    <a 
-                              
-                                        href="Categoria/Subcategoria/Subcategoria.html" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0007.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/18pVX8mrxnVBQRE4iBV1mddELA2gmRZZDR8LEvxaBa3k/edit?usp=sharing" >                                                
-                                        <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0008.png" > 
-                                    </a>
-                                </td> 
-                            </tr> 
-                            </table> </div> </li> </ul></div>
-                    </li>
-                    <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
-
-
-
-
-
-
-
-<!-- CONTEÚDO INÍCIO --------------------------------------------------------------------------------->        
-                    <!-- INÍCIO -- -->                      
-                    <li style="float: left;"> <div style="padding: 0px; margin-left: 30px; margin-bottom: 20px;">
-                        <ul style="list-style:none; line-height: 1.5; padding: 0px; margin: 0px;" ><li> <div style="margin-left:0px;"> <table cellpadding="2" cellspacing="2" border="0">
-                            <tr>
-                                <td class="per"> 
-                                    
-                                    <!-- target="_parent" target="centro" -->
-                                    <a 
-                                        target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1IYFzCnOcCshuQWq-VgfMzxZ03rJdBcd3fzyb_2zIm64/edit?usp=sharing" >                                                
+                                        href="https://docs.google.com/spreadsheets/d/1TNJs9RwvO9Qp9GgCnKqK7Uzg99kTzqYsUAx3sFIo_XM/edit?usp=sharing" >                                                
                                         <img width="250px" height="300px" class="mousepointer floatr positionr" 
                                              src="Categoria/0009.png" > 
                                     </a>
@@ -569,7 +299,13 @@
                             </table> </div> </li> </ul></div>
                     </li>
                     <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
+<!-- CONTEÚDO FIM --------------------------------------------------------------------------------->
+
+
+
+
+
+
 
 
 
@@ -584,19 +320,24 @@
                             <tr>
                                 <td class="per"> 
                                     
-                                    <!-- target="_parent" target="centro" -->
+                                    <!-- target="_parent" target="_blank" target="centro" -->
                                     <a 
                                         target="_blank"
-                                        href="https://docs.google.com/spreadsheets/d/1-hz2DKKdiJkIlUQ4wUCl7YFnhoJdWbOal13aMIjuGJo/edit?usp=sharing" >                                                
+                                        href="https://docs.google.com/spreadsheets/d/1Qi4QCSaTw6z7bv34J0Sj3i9qWv1pxqja35x2IYUSQp4/edit?usp=sharing" >                                                
                                         <img width="250px" height="300px" class="mousepointer floatr positionr" 
-                                             src="Categoria/0010.png" > 
+                                             src="Categoria/0020.png" > 
                                     </a>
                                 </td> 
                             </tr> 
                             </table> </div> </li> </ul></div>
                     </li>
                     <!-- FIM -- -->   
-<!-- CONTEÚDO FIM ---------------------------------------------------------------------------------> 
+<!-- CONTEÚDO FIM --------------------------------------------------------------------------------->
+
+
+
+
+
 
 
 
@@ -631,6 +372,143 @@
 
 
 
+
+
+<!-- 
+-0
+-1
+-2
+- #### JQUERY INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->  
+<script type="text/javascript">    
+     
+     function abrir_controle_de_validade(){
+         window.location.href = 'Categoria/controle_de_validade/pagina_inicial.html?' 
+                 + "usuario_logado_id_nome_" + "=" + document.getElementById("usuario_logado_id_nome_").value + "&" 
+                 + "usuario_logado_id_" + "=" + document.getElementById("usuario_logado_id_").value;
+     }
+     
+     function aumentar_imagem( id ){
+         
+         if ( $('#'+id).hasClass("ativo") === true ){
+             
+            $('#'+id).animate({height:"150px",width:"150px"});
+            
+            $('#'+id).removeClass('ativo');
+         }
+         else{
+            
+            $('#'+id).animate({height:"500px",width:"500px"});
+            
+            $('#'+id).addClass('ativo');           
+        }
+     }     
+     
+     
+     function setando_parametros(){
+//INÍCIO - BAIXANDO TABELA PRODUTOS POR EAN  
+    try{
+        
+    //captura a url da página
+    var url = window.location.href; 
+    //alert("URL CAPTURADA: \n\n" + url);
+    
+    //tenta localizar o ?
+    var res = url.split('?');
+    
+    if (res[1] === undefined) {
+        //alert('página sem parâmetros.');
+    }
+    
+    if (res[1] !== undefined) {
+		//tenta localizar os & (pode haver mais de 1)
+        var parametros = res[1].split('&');
+        //alert('Parametros encontrados:\n' + parametros);
+        
+        var ean = "";
+        var qtd = "";
+        var data = "";
+            
+        for( var cont = 0; cont < parametros.length; cont++ ){
+            
+            if( cont === 0 ){
+
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    document.getElementById("usuario_logado_id_nome_").value = valor_do_parametro;    
+                }
+            }                                                        
+            else if( cont === 1 ){
+
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }            
+            else if( cont === 2 ){
+                
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    //document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }            
+            else if( cont === 3 ){
+                
+                if( parametros[cont] !== undefined ){
+                
+                    var dados = parametros[cont].split('=');              
+                    var nome_do_parametro = dados[0];
+                    var valor_do_parametro = dados[1];
+                    
+                    //document.getElementById("usuario_logado_id_").value = valor_do_parametro;  
+                }
+            }
+        }
+
+    }        
+    }catch(Exception){}
+//FIM - BAIXANDO TABELA PRODUTOS POR EAN           
+     }
+     
+jQuery(document).ready(function(){
+    
+    setTimeout(function(){ setando_parametros(); }, 0);
+
+});
+    
+jQuery(window).resize(function() {
+
+    var browser_width2 = jQuery(window).width();
+
+});
+</script>
+<!-- 
+-0
+-1
+-2
+- #### JQUERY FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+-->
 
 
 
