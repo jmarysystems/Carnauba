@@ -37,28 +37,28 @@ setTimeout(function(){
                     
                     try{
                         var img = new Image();
-	                img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".gif";
+	                img.src = "../../../../../../Imagens/" + ean_p.trim() + ".gif";
                         img.onload = function() {
                             
-                            adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".gif" );
+                            adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".gif" );
 	                }
 	                img.onerror = function() {
                             
-                            img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".png";
+                            img.src = "../../../../../../Imagens/" + ean_p.trim() + ".png";
                             img.onload = function() {
                                 
-                                adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".png" );
+                                adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".png" );
                             }
                             img.onerror = function() {
                                 
-                                img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".jpg";
+                                img.src = "../../../../../../Imagens/" + ean_p.trim() + ".jpg";
                                 img.onload = function() {
                                     
-                                    adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".jpg" );
+                                    adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".jpg" );
                                 }
                                 img.onerror = function() {
                                     
-                                    adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + "sem_imagem2" + ".gif" );
+                                    adicionando_produto_ao_html( ean_p.trim(), des, cat, umb, qtd, data, "../../../../../../Imagens/" + "sem_imagem2" + ".gif" );
                                 }
                             }
                         }
@@ -75,28 +75,28 @@ setTimeout(function(){
             
             try{
                         var img = new Image();
-	                img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".gif";
+	                img.src = "../../../../../../Imagens/" + ean_p.trim() + ".gif";
                         img.onload = function() {
                             
-                            adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".gif" );
+                            adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".gif" );
 	                }
 	                img.onerror = function() {
                             
-                            img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".png";
+                            img.src = "../../../../../../Imagens/" + ean_p.trim() + ".png";
                             img.onload = function() {
                                 
-                                adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".png" );
+                                adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".png" );
                             }
                             img.onerror = function() {
                                 
-                                img.src = "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".jpg";
+                                img.src = "../../../../../../Imagens/" + ean_p.trim() + ".jpg";
                                 img.onload = function() {
                                     
-                                    adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + ean_p.trim() + ".jpg" );
+                                    adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "../../../../../../Imagens/" + ean_p.trim() + ".jpg" );
                                 }
                                 img.onerror = function() {
                                     
-                                    adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "http://www.jmarysystems.com.br/ProdutoPorEan/Imagens/" + "sem_imagem" + ".gif" );
+                                    adicionando_produto_ao_html( ean_p.trim(), "Produto não Registrado!", "--------------", "----", qtd, data, "../../../../../../Imagens/" + "sem_imagem" + ".gif" );
                                 }
                             }
                         }

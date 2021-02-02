@@ -5,10 +5,10 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-var id_planilha_tabela_controle_de_validade = "14DF27ZEK9dCc6G9xD1xF4hcs5_9awQO8BU1WBFylBDI";
+var id_planilha_tabela_controle_de_validade = "15jMWfheYb16dOi-Nu5aYN__gjNoVGrMq4QpL4UcoxPQ";
 var url_planilha_tabela_controle_de_validade = "https://sheets.googleapis.com/v4/spreadsheets/"+ id_planilha_tabela_controle_de_validade + "/values/A:B?key=AIzaSyBwiMCywJRFQHuuksWdhqwjOrR5mDaWJYs";
 
-var id_formulario_tabela_controle_de_validade = "1FAIpQLSc6uNvRkf9o4jBdeeARhjAMtIkog-g_NBrFKCF7_SqacEtJyA";
+var id_formulario_tabela_controle_de_validade = "1FAIpQLSe8QVFxolpWLGq7u_2p0LfrilPPVfhP2J__sasPP4VESb8d8g";
 
 var entry_formulario_controle_de_validade_id_texto = "833181104"; 
 var entry_formulario_controle_de_validade_id_ESTABELECIMENTO = "1076878183";
