@@ -90,30 +90,61 @@ function _0005_02_controle_de_validade_tabela_html_listar_na_tabela_html_a_plani
                 
                 try{
                     
-                    jm_id = argumentos[0];
-                    jm_comando = argumentos[1];
-                    jm_auto_quantidade_de_alteracoes = argumentos[2];
-                    jm_destinatario = argumentos[3];
-                    jm_remetente = argumentos[4];
-                    jm_data = argumentos[5];
-                    jm_qtd = argumentos[6];
-                    jm_ean = argumentos[7];
-                    jm_material = argumentos[8];
-                    jm_umb = argumentos[9];
+                    jm_id        = importar_Para_Alfabeto_JM( argumentos[0] ).trim();
+                    jm_comando   = importar_Para_Alfabeto_JM( argumentos[1] ).trim();
+                    jm_auto_quantidade_de_alteracoes = importar_Para_Alfabeto_JM( argumentos[2] ).trim();
+                    jm_destinatario = importar_Para_Alfabeto_JM( argumentos[3] ).trim();
+                    jm_remetente = importar_Para_Alfabeto_JM( argumentos[4] ).trim();
+                    jm_data      = importar_Para_Alfabeto_JM( argumentos[5] ).trim();
+                    jm_qtd       = importar_Para_Alfabeto_JM( argumentos[6] ).trim();
+                    jm_ean       = importar_Para_Alfabeto_JM( argumentos[7] ).trim();
+                    jm_material  = importar_Para_Alfabeto_JM( argumentos[8] ).trim();
+                    jm_umb       = importar_Para_Alfabeto_JM( argumentos[9] ).trim();
                 }catch(Exception){}
-                               
+                
+////////////////////////////////////////////////////////////////////////////////
+////**************************************************************************** 
+//////////////////////////////////////////////////////////////////////////////// 
+/*
+var linha = tabela_de_dados_dos_produtos.trim().split( '@' );
+        for( var j = 0; j < linha.length; j++ ) {
+
+            if( linha[j].includes("&") ){
+                
+                //alert( linha[j] );      
+                var argumentos_tb = linha[j].split("&");
+                var ean_p = argumentos_tb[0].trim(); 
+                
+                if( ean_p.trim() === jm_ean.trim() ){
+                    jm_material = argumentos_tb[1].trim();
+                    //cat = argumentos_tb[2].trim();
+                    jm_umb = argumentos_tb[3].trim();
+                    
+                    alert( ean_p.trim() + " - " + jm_ean.trim()+ " - if( ean_p.trim() === jm_ean.trim() ){");
+                }
+                else{
+                    
+                    console.log( " * " + ean_p.trim() + " - " + jm_ean.trim() ); 
+                }
+            }
+        }
+*/
+//////////////////////////////////////////////////////////////////////////////// 
+////****************************************************************************        
+////////////////////////////////////////////////////////////////////////////////  
+
                 $('#tabela > tbody:last').append(
                     '<tr>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_id ).trim() + '</td>' + 
-                        //'<td>' + importar_Para_Alfabeto_JM( jm_comando ).trim() + '</td>' + 
-                        //'<td>' + importar_Para_Alfabeto_JM( jm_auto_quantidade_de_alteracoes ).trim() + '</td>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_destinatario ).trim() + '</td>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_remetente ).trim() + '</td>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_data ).trim() + '</td>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_qtd ).trim() + '</td>' + 
-                        '<td NOWRAP=\'NOWRAP\'>' + importar_Para_Alfabeto_JM( jm_ean ).trim() + '</td>' + 
-                        '<td NOWRAP=\'NOWRAP\'>' + importar_Para_Alfabeto_JM( jm_material ).trim() + '</td>' + 
-                        '<td>' + importar_Para_Alfabeto_JM( jm_umb ).trim() + '</td>' + 
+                        '<td>'                   + jm_id           + '</td>' + 
+                        //'<td>'                 + jm_comando      + '</td>' + 
+                        //'<td>'                 + jm_auto_quantidade_de_alteracoes + '</td>' + 
+                        '<td>'                   + jm_destinatario + '</td>' + 
+                        '<td>'                   + jm_remetente    + '</td>' + 
+                        '<td align=\'center\'>'  + jm_data         + '</td>' + 
+                        '<td align=\'center\'>'  + jm_qtd          + '</td>' + 
+                        '<td NOWRAP=\'NOWRAP\'>' + jm_ean          + '</td>' + 
+                        '<td NOWRAP=\'NOWRAP\'>' + jm_material     + '</td>' + 
+                        '<td>'                   + jm_umb          + '</td>' + 
                     '</tr>'
                 );
 
