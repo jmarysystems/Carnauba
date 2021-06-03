@@ -172,7 +172,7 @@ try{
 "                                <tr>" +
 "                                    <td align=\"center\">" +
 "                                        <img src=\""+ "../arquivos/imagens/003_login/adicionar.png" + "\" title=" + "Adicionar" + 
-                                             " onclick=\"enviando_produto_proximo_do_vencimento('" + ean + "','" + qtd + "','" + data + "','" + des + "','" + umb + "');\" width=\"100\" height=\"40\" style=\"cursor: pointer\" > " +
+                                             " onclick=\"enviando_produto_proximo_do_vencimento_js_dentro_do_html('" + ean + "','" + qtd + "','" + data + "','" + des + "','" + umb + "');\" width=\"100\" height=\"40\" style=\"cursor: pointer\" > " +
 "                                    </td>" +
 "                                </tr>" +
 "<!-- BOTAO NOVA LINHA +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->" +
